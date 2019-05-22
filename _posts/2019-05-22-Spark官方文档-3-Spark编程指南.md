@@ -1,6 +1,6 @@
 ---
 layout:     post  
-title:      学习笔记：Spark 官方文档（2.2.0）   
+title:      笔记：Spark 官方文档（2.2.0)  
 subtitle:   Spark编程指南  
 date:       2019-05-20  
 author:     岑晨  
@@ -8,6 +8,7 @@ header-img:
 catalog: true  
 tags:  
     - spark
+    - 笔记
 ---  
 
 # 概述 
@@ -18,4 +19,6 @@ tags:
   > - RDD持久化：RDD.persist()或RDD.cache()，其流程是：在action中计算得到rdd；然后，将其保存在每个节点的内存中。
 
 - 在 Spark 中的第二个抽象是能够用于并行操作的 **_shared variables_**（共享变量），默认情况下，当 Spark 的一个函数作为一组不同节点上的任务运行时，它将每一个变量的副本应用到每一个任务的函数中去。有时候，一个变量需要在整个任务中，或者在任务和 driver program（驱动程序）之间来共享。Spark 支持两种类型的共享变量：_broadcast variables_（广播变量），它可以用于在所有节点上缓存一个值，和 _accumulators_（累加器），他是一个只能被 “added（增加）” 的变量，例如 counters 和 sums。
+
+  > - 变量：
 
