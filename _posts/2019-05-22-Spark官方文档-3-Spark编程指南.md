@@ -1,6 +1,6 @@
 ---
 layout:     post  
-title:      笔记：Spark 官方文档（2.2.0)  
+title:      笔记：Spark 官方文档(2.2.0)   
 subtitle:   Spark编程指南  
 date:       2019-05-20  
 author:     岑晨  
