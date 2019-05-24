@@ -1,18 +1,17 @@
 ---
-   layout:     post  
-title:      笔记：Spark 官方文档(2.2.0)   
-subtitle:   3、Spark-RDD编程指南  
+layout:     post  
+title:      笔记：Spark 官方文档(2.2.0)    
+subtitle:   3、SparkRDD编程指南  
 date:       2018-05-20  
 author:     岑晨  
 header-img: 
 catalog: true  
 tags:  
 
-    - spark
+    - spark   
+
     - 笔记
----
-
-
+---  
 
 # 概述 
 
