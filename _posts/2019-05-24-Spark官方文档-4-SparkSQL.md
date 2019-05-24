@@ -1,14 +1,15 @@
 ---
 layout:     post  
 title:      笔记：Spark 官方文档(2.2.0)    
-subtitle:   4、SparkSQL编程指南  
-date:       2018-05-20  
+subtitle:   4、SparkSQL指南  
+date:       2018-05-24  
 author:     岑晨  
 header-img: 
 catalog: true  
 tags:  
-		- spark   
-		- 笔记
+    - spark     
+    - 笔记  
+
 ---
 
 # 概览  
