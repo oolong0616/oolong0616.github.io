@@ -14,7 +14,9 @@ tags:
 
 # 概览  
 
-Spark SQL 是 Spark 处理结构化数据的一个模块，提供了查询结构化书和计算结果的接口，可通过SQL或者DataSet API 访问SparkSQL。    
+Spark SQL 是 Spark 处理结构化数据的一个模块，提供了查询结构化书和计算结果的接口，可通过SQL或者DataSet\DataFrame API 访问SparkSQL。
+
+## SQL 接口
 
 - 用途：
   - 执行SQL查询
