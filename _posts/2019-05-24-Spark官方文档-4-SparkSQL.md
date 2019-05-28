@@ -14,9 +14,7 @@ tags:
 
 # 概览  
 
-Spark SQL 是 Spark 处理结构化数据的一个模块，提供了查询结构化书和计算结果的接口，可通过SQL或者DataSet API 访问SparkSQL。   
-
-## SQL   
+Spark SQL 是 Spark 处理结构化数据的一个模块，提供了查询结构化书和计算结果的接口，可通过SQL或者DataSet API 访问SparkSQL。    
 
 - 用途：
   - 执行SQL查询
@@ -61,8 +59,6 @@ spark = SparkSession \
 ### DataFrame 创建
 
 使用SparkSession，可以从RDD、Hive表或者Spark数据源创建DataFrame。
-
-> Json 读取
 
 ```python
 jf=spark.read.json("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/employees.json")
