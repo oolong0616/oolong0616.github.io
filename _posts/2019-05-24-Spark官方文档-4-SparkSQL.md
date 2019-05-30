@@ -63,8 +63,8 @@ spark = SparkSession \
 使用SparkSession，可以从RDD、Hive表或者Spark数据源创建DataFrame。
 
 ```python
-jf = spark.read.json \
-("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/employees.json")
+jf = spark.read.json( \
+                     "file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/employees.json")
 jf.show()
 ###########
 # +-------+------+
@@ -174,27 +174,37 @@ sqlDF =spark.sql("select * from global_temp.employees")
 
 ### 利用反射机制
 
-
-
-- 利用SparkSession
-
-  ```python
-  spS = spark.read.text \
-  ("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.txt")
-  # 读取text文件，生成DataFrame
-  # 注意一点：利用SparkSession.read方法读取text的方法是text，而利用sparkContext的方法是textFile
-  
-  ```
-
-  
-
-- 利用sparkContext
-
-```Python
-
+```python
+from pyspark.sql import Row
+sc = spark.sparkContext
+# 创建SparkContext对象
+lines =sc.textFile( \
+                   "file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.txt")  
+# 读取文件，返回RDD
+lines.collect()
+# [u'Michael, 29', u'Andy, 30', u'Justin, 19']
+# RDD 读取文件与DataFrame读取文件的不同：
+# RDD读取文件后，存成一个字符串，DataFrame读取文件后，自动按照行存成多个Row
+parts = lines.map(lambda l: l.split(","))
+# 把字符串切分成多个数组
+parts.collect()
+# [[u'Michael', u' 29'], [u'Andy', u' 30'], [u'Justin', u' 19']]
+people =parts.map(lambda x:Row(name=x[0],age=int(x[1])))
+# 把数组拼接成Row对象，此时，RDD内置格式与DataFrame格式保持一致
+schemaPeople = spark.createDataFrame(people)
+# 此方法为RDD转换为DataFrame的方法，之前都是在做数据准备
+schemaPeople.createOrReplaceTempView("people")
+# 注册为Session级临时视图
+teenagers = spark.sql(\
+                      "SELECT name FROM people WHERE age >= 13 AND age <= 19")
+teenNames = teenagers.rdd.map(\
+                              lambda p: "Name: " + p.name).collect()
+# [u'Name: Michael', u'Name: Andy', u'Name: Justin']
+# 返回一个数组
+for name in teenNames:
+    print(name)
+# 循环数组，打印信息
 ```
-
-
 
 ### 利用编程接口
 
