@@ -136,5 +136,64 @@ jf.groupby(jf['salary']).count().show()
 
 > [Spark SQL API文档]([http://spark.apache.org/docs/2.2.0/api/python/pyspark.sql.html#pyspark.sql.DataFrame](http://spark.apache.org/docs/2.2.0/api/python/pyspark.sql.html#pyspark.sql.DataFrame))
 
-###  SQL查询
+###  SQL语句查询
+
+- Session临时变量
+
+  ```python
+  jf.createOrReplaceTempView("employees")
+  # 创建或替换本地临时视图。此视图的生命周期依赖于SparkSession类，如果想drop此视图可采用dropTempView删除
+  # DataFrame 通过Json文件employees.json文件创建。
+  sqlDF=spark.sql("select * from employees")
+  # 通过SQL语句筛选视图数据，返回DataFrame，类型与jf中各列对象相同。
+  sqlDF.show()
+  # 返回DataFrame值
+  ```
+
+- Application临时变量
+
+  ```python
+  jf.createGlobalTempView("employees")
+  # 创建Application级临时视图，此视图在应用范围内可被各Session共享，知道Spark应用程序终止
+sqlDF =spark.sql("select * from global_temp.employees")
+  # Application临时视图与系统保留数据库global_temp绑定，需要用限定名称引用,发挥一个DataFrame
+  sqlDF.show()
+  spark.newSession().sql("select * from global_temp.employees")
+  ```
+  
+  > 如果出现报错：Caused by: ERROR XSDB6: Another instance of Derby may have already booted the database /home/hduser/metastore_db.
+  > 则删除该目录重新启动，解决该问题
+  
+## RDD 转换
+
+  Spark SQL支持两种不同的方法将现有RDD转换为数据集。
+
+  - 使用反射来推断包含特定类型对象的RDD的Schema。在你的 Spark 应用程序中当你已知 Schema 时这个基于方法的反射可以让你的代码更简洁。
+  - 通过编程接口构造一个Schema，然后将其应用于现有RDD。虽然此方法更详细，但它允许您在直到运行时才知道列及其类型去构造数据集。
+
+### 利用反射机制
+
+
+
+- 利用SparkSession
+
+  ```python
+  spS=spark.read.text("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.txt")
+  # 读取text文件，生成DataFrame，注意一点：利用SparkSession.read方法读取text的方法是text，而利用sparkContext的方法是textFile
+  
+  ```
+
+  
+
+- 利用sparkContext
+
+```Python
+
+```
+
+
+
+### 利用编程接口
+
+
 
