@@ -63,7 +63,8 @@ spark = SparkSession \
 使用SparkSession，可以从RDD、Hive表或者Spark数据源创建DataFrame。
 
 ```python
-jf=spark.read.json("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/employees.json")
+jf=spark.read.json\
+("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/employees.json")
 jf.show()
 ###########
 # +-------+------+
@@ -178,7 +179,8 @@ sqlDF =spark.sql("select * from global_temp.employees")
 - 利用SparkSession
 
   ```python
-  spS=spark.read.text("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.txt")
+  spS=spark.read.text\
+  ("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.txt")
   # 读取text文件，生成DataFrame，注意一点：利用SparkSession.read方法读取text的方法是text，而利用sparkContext的方法是textFile
   
   ```
