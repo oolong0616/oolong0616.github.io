@@ -208,5 +208,111 @@ for name in teenNames:
 
 ### 利用编程接口
 
+Row的内容类型不可确定的情况下，采用此方式，具体步骤包括：
 
+- Setp1：从原始的 RDD 创建 RDD 的 Row（行）。
+- Setp2：Step 1 被创建后，创建 Schema 表示一个 StructType匹配 RDD 中的 Row（行）的结构。
+- Setp3：通过 SparkSession提供的 createDataFrame 方法应用 Schema 到 RDD 的 RowS（行）
 
+```python
+from pyspark.sql.types import *
+sc = spark.sparkContext
+lines = sc.textFile(\
+                    "file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.txt")
+# 读取文件，创建RDD
+lines.collect()
+# [u'Michael, 29', u'Andy, 30', u'Justin, 19']
+parts = lines.map(lambda l: l.split(","))
+# 拆分成数组
+# [[u'Michael', u' 29'], [u'Andy', u' 30'], [u'Justin', u' 19']]
+people = parts.map(lambda p: (p[0], p[1].strip()))
+# strip():Python 函数，移除首位指定的字符串
+# 返回键值对
+# [(u'Michael', u'29'), (u'Andy', u'30'), (u'Justin', u'19')]
+fields = [StructField(field_name, StringType(), True) \
+          for field_name in schemaString.split()]
+# 从 schemaString.split()中便利出每个对象，构建以StructField为内容的数组
+schema = StructType(fields)
+# 封装
+# StructType(List(StructField(name,StringType,true),StructField(age,StringType,true)))
+schemaPeople = spark.createDataFrame(people, schema)
+# 将RDD转换为DataFrame 
+schemaPeople.createOrReplaceTempView("people")
+# 构建Sesson级临时视图
+results = spark.sql("SELECT * FROM people")
+results.show()
+# +-------+---+
+# |   name|age|
+# +-------+---+
+# |Michael| 29|
+# |   Andy| 30|
+# | Justin| 19|
+# +-------+---+
+
+```
+# 数据源
+
+## 通用加载\保存
+
+```python
+df = spark.read.load("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/users.parquet")
+# load()：默认读取.parquet文件，如读取其他格式文件，需指定format
+df.show()
+# +------+--------------+----------------+                                        
+# |  name|favorite_color|favorite_numbers|
+# +------+--------------+----------------+
+# |Alyssa|          null|  [3, 9, 15, 20]|
+# |   Ben|           red|              []|
+# +------+--------------+----------------+
+
+```
+
+>  parquet 文件：是Hadoop生态系统中任何项目可用的列式存储格式，其特点为：
+>
+> - 可以跳过不符合条件的数据，只读取需要的数据，降低 IO 数据量
+> -  压缩编码可以降低磁盘存储空间（由于同一列的数据类型是一样的，可以使用更高效的压缩编码（如 Run Length Encoding t  Delta Encoding）进一步节约存储空间）
+> - 只读取需要的列，支持向量运算，能够获取更好的扫描性能
+> - Parquet 格式是 Spark SQL 的默认数据源，可通过 spark.sql.sources.default 配置
+
+## 手动指定数据源
+
+```python
+df =spark.read.load(\
+                    "file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/people.json", format="json")
+# 手动指定数据源
+df.select("name", "age").write.save("file:////userDir/spark/spark-2.4.1-bin-hadoop2.6/namesAndAges.json", format="json")
+# 保存数据  
+# part-00000-56bca6af-1f17-4640-8e9d-e6aefab6ab34-c000.json
+# .part-00000-56bca6af-1f17-4640-8e9d-e6aefab6ab34-c000.json.crc
+#  _SUCCESS
+# ._SUCCESS.crc
+# .crc：验证文件
+```
+
+## 直接在文件中运行SQL
+
+```python
+df = spark.sql("SELECT * FROM parquet.`file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/examples/src/main/resources/users.parquet`")
+# 直接用SQL读取文件数据
+# 只有 parquet支持此方式
+```
+
+## 保存到表
+
+- 即时程序重新启动，持久化表依旧存在
+
+- 基于文件的数据源可以使用如下方法自定义表路径，自定义表路径后，删除表的同时不删除自定义路径，数据将被保留，如不使用自定义表路径，删除时同时删除表路径和数据
+
+  ```python
+  df.write.option("path", "/some/path").saveAsTable("t")
+  ```
+
+- 持久化数据表可将每个分区的元数据保存到Hive metastore中
+
+  - 可以只返回查询必须的分区，不需要读取所有分区
+
+  - Hive DDL操作可用于Datasource API 创建的表
+
+  - 要同步metastore中分区信息，要调用MSCK REPAIR TABLE 方法，重新读取分区信息。
+
+    
