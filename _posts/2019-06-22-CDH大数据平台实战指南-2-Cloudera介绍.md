@@ -11,6 +11,8 @@ tags:
     - 笔记     
 ---
 
+
+
 #Cloudera 工具
 
 -  CDH：分发的Hadoop软件发型包，包含Impala和CM
@@ -19,4 +21,4 @@ tags:
 - Cloudera Manager（CM）：部署、监控及管理
 - Cloudera Navigator：数据管理及监管工具
 
-![image-20190623103033392](/MyDoc/05_WorkSpace/oolong0616.github.io/img/CDH_Frame.png)
+![Aaron Swartz](https://raw.githubusercontent.com/oolong0616/oolong0616.github.io/master/img/CDH_Frame.png)
