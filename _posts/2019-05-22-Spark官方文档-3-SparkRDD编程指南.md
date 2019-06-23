@@ -1,7 +1,7 @@
 ---
 layout:     post  
 title:      3、SparkRDD编程指南    
-subtitle:   笔记：Spark 官方文档(2.2.0)  
+subtitle:   笔记：Spark 官方文档(更新至2.4.3)  
 date:       2018-05-20  
 author:     岑晨  
 header-img: 
@@ -13,23 +13,17 @@ tags:
 
 # 概述 
 
-- 
-
-- 每个Spark应用程序都包含一个**驱动程序(Driver)**，该程序运行用户的`main`功能并在集群上执行各种*并行操作*。Spark提供的主要抽象是***弹性分布式数据集***（RDD），它是跨群集节点分区的元素的集合，可以并行操作。RDD是通过从Hadoop文件系统（或任何其他Hadoop支持的文件系统）中的文件或驱动程序中的现有Scala集合开始并对其进行转换而创建的。用户还可以要求Spark 在内存中*保留* RDD，允许它在并行操作中有效地重用。最后，RDD会自动从节点故障中恢复。
+- 每个Spark应用程序都包含一个驱动程序(Driver)，该程序运行用户的main功能并在集群上执行各种并行操作。Spark提供的主要抽象是弹性分布式数据集（RDD），它是跨群集节点分区的元素的集合，可以并行操作。RDD是通过从Hadoop文件系统（或任何其他Hadoop支持的文件系统）中的文件或驱动程序中的现有Scala集合开始并对其进行转换而创建的。用户还可以要求Spark 在内存中保留RDD，允许它在并行操作中有效地重用。最后，RDD会自动从节点故障中恢复。
 
   > - 驱动程序：包含main()函数，Shell就是一个驱动程序
   > - RDD持久化：RDD.persist()或RDD.cache()，其流程是：在action中计算得到rdd；然后，将其保存在每个节点的内存中。
 
-- 在 Spark 中的第二个抽象是能够用于并行操作的 **_shared variables_**（共享变量），默认情况下，当 Spark 的一个函数作为一组不同节点上的任务运行时，它将每一个变量的副本应用到每一个任务的函数中去。有时候，一个变量需要在整个任务中，或者在任务和 driver program（驱动程序）之间来共享。Spark 支持两种类型的共享变量：_broadcast variables_（广播变量），它可以用于在所有节点上缓存一个值，和 _accumulators_（累加器），他是一个只能被 “added（增加）” 的变量，例如 counters 和 sums。
+- 在 Spark 中的第二个抽象是能够用于并行操作的_shared variables_（共享变量），默认情况下，当 Spark 的一个函数作为一组不同节点上的任务运行时，它将每一个变量的副本应用到每一个任务的函数中去。有时候，一个变量需要在整个任务中，或者在任务和 driver program（驱动程序）之间来共享。Spark 支持两种类型的共享变量：_broadcast variables_（广播变量），它可以用于在所有节点上缓存一个值，和 _accumulators_（累加器），他是一个只能被 “added（增加）” 的变量，例如 counters 和 sums。
 
-  > Spark是多机器集群部署的，分为Driver/Master/Worker，Master负责资源调度，Worker是不同的运算节点，由Master统一调度。而Driver是我们提交Spark程序的节点，并且所有的reduce类型的操作都会汇总到Driver节点进行整合。节点之间会将map/reduce等操作函数传递一个独立副本到每一个节点，这些变量也会复制到每台机器上，而节点之间的运算是相互独立的，变量的更新并不会传递回Driver程序。
-  >
-  > - 累加器：是一种只能通过关联操作进行“加”操作的变量，因此它能够高效的应用于并行操作中。它们能够用来实现counters和sums，如果我们需要在spark中进行一些全局统计就可以使用它。
-  > - 广播变量：允许程序员缓存一个只读的变量在每台机器上面，而不是每个任务保存一份拷贝。例如，利用广播变量，我们能够以一种更有效率的方式将一个大数据量输入集合的副本分配给每个节点。Spark也尝试着利用有效的广播算法去分配广播变量，以减少通信的成本。       
 
 # 初始化Spark 
 
-创建SparkConf及SparkContext，**SparkConf一旦创建，不可更改**：
+创建SparkConf及SparkContext，SparkConf一旦创建，不可更改：
 
 ```python
 
@@ -74,7 +68,7 @@ sc = se.sparkContext
   --deploy-mode <deploy-mode> \
 # 包含两种模式：cluster，client(default)
 #   cluster:驱动器程序会被传输并被执行于集群的一个工作节点上
-#   client:spark-submit会将驱动器程序运行在spark-submit被调用的这台机器上。
+#   client:会将驱动器程序运行在spark-submit被调用的这台机器上。
   --conf <key>=<value> \
 # 配置Spark相关属性
   ... # other options
@@ -101,6 +95,9 @@ rddData.collect()
 # [1, 2, 3, 4, 6]， 显示RDD中所有内容，注意RDD存储内容应可在当前Driver服务器内存中容纳
 ```
 
+> - Spark 为每个分区提供一个独立的程序
+> - 可以通过.parallelize(data,int) 设置分区数量
+
 ## 外部数据集创建
 
 ```python
@@ -109,7 +106,7 @@ textFile =sc.textFile("file:///userDir/spark/spark-2.4.1-bin-hadoop2.6/README.md
 #		本地文件：file:///
 # 	HDFS文件：hdfs://
 # 	Spark配置SPARK_DIST_CLASSPATH后，默认从HDFS中找文件  
-# 	textFile 将文件行切分，存入RDD中
+# 	textFile 将文件按照行行切分，存入RDD中
 # 第二参数：
 #		控制文件分区数，默认为默认情况下，Spark为文件的每个块创建一个分区（HDFS中默认为128MB），但您也可以通过传递更大的值来请求更多的分区，但是分区数不能小于HDFS块数。
 textFile.first()
@@ -124,8 +121,10 @@ textFile.first()
 其他数据格式：
 
 - 目录（SparkContext.wholeTextFiles）：读取包含多个小文件的目录，按照(文件名称,内容）模式返回
-- pickle Python对象(`RDD.saveAsPickleFile`和`SparkContext.pickleFile`)        
-- 
+
+- pickle Python对象(`RDD.saveAsPickleFile`和`SparkContext.pickleFile`) ，python中几乎所有的数据类型（列表，字典，集合，类等）都可以用pickle来序列化，pickle序列化后的数据，可读性差，人一般无法识别。
+
+  
 
 
 > 参照文档  
