@@ -22,3 +22,9 @@ tags:
 - Cloudera Navigator：数据管理及监管工具
 
 ![Aaron Swartz](https://raw.githubusercontent.com/oolong0616/oolong0616.github.io/master/img/CDH_Frame.png)
+
+# CM 
+
+Hadoop 集群的软件分发及管理监控平台，用于部署Hadoop集群，并对节点及服务进行管理和监控。
+
+![Aaron Swartz](https://raw.githubusercontent.com/oolong0616/oolong0616.github.io/master/img/image-20190623105022762.png)
