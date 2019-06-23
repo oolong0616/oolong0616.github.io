@@ -1,6 +1,6 @@
 ---
 layout:     post  
-title:      Cloudera介绍    
+title:      2、Cloudera介绍    
 subtitle:   笔记：CDH大数据平台实战指南 
 date:       2019-05-11  
 author:     岑晨  
@@ -13,7 +13,7 @@ tags:
 
 
 
-#Cloudera 工具
+# Cloudera 工具
 
 -  CDH：分发的Hadoop软件发型包，包含Impala和CM
 - Impala：Mpp SQL引擎，用于交互式查询分析，适合传统BI查询，可用来查询来自各种源的数据。
