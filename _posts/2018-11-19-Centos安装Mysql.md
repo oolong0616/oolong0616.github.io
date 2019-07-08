@@ -44,6 +44,8 @@ tags:
     yum -y install autoconf 
     yum -y install numactl
     yum install  libaio-devel.x86_64
+    yum install nc 
+    nc -l -p 3306
     ```
 
   - 安装
@@ -87,9 +89,7 @@ tags:
       systemctl restart mysql 
       ```
 
-      
-
-    - 无密码登录
+    - 无密码登录（如不成功，再重启一下服务）
 
       ```bash
       mysql -u root -p 
@@ -98,23 +98,41 @@ tags:
     - 设置
 
       ```sql
-      USE mysql;
-      UPDATE user SET Password = 'new-password' WHERE User = 'root'; 
+      use mysql;
+      update user set password=password('1qaz2WSX') where user='root' and host='localhost';
+      commit;
+      flush privileges; 
       ```
 
     - 删除my.cnf文件修改内容
 
-    - 刷新授权
+    - 重新设置密码
 
       ```sql
-      FLUSH  PRIVILEGES;
-      ```
-
-    - 授权其他机器登录
-
+      SET PASSWORD = PASSWORD('1qaz2WSX');
+      commit;
+      flush privileges; 
+    ```
+  
+- 授权其他机器登录
+  
+  - 配置my.cnf
+  
+      ```bash
+      bind-address = 0.0.0.0
+      port=3306
+    ```
+  
+  - 设置数据库
+  
       ```sql
-      GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
+      use mysql;
+      GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '1qaz2WSX' WITH GRANT OPTION;
       FLUSH  PRIVILEGES;
-      ```
-
-      
+      update user set host='%' where user='root' and host='localhost';  # 报错不用理会
+      FLUSH  PRIVILEGES;
+    ```
+  
+    
+  
+    
