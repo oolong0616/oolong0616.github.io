@@ -47,7 +47,9 @@ Hadoop 集群的软件分发及管理监控平台，用于部署Hadoop集群，�
 
     > REST API :http://www.ruanyifeng.com/blog/2011/09/restful.html 
 
-Cloudera Management Service 可作为一组角色实施各种管理功能 ：
+# Cloudera Management Service 
+
+可作为一组角色实施各种管理功能 ：
 
 -  Activity Monitor：收集有关服务运行活动的信息 。
 - Host Monitor：收集有关主机的运行状况和指标信息。
