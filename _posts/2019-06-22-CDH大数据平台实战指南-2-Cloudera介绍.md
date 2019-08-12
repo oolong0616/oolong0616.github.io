@@ -7,8 +7,7 @@ author:     岑晨
 header-img: 
 catalog: true  
 tags:  
-    - CDH     
-    - 笔记     
+    - CDH   
 ---
 
 # Cloudera 工具

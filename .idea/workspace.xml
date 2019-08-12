@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09e8dae9-a9ec-4ebe-a7ff-5c5faee4f69d" name="Default Changelist" comment="test">
+    <list default="true" id="09e8dae9-a9ec-4ebe-a7ff-5c5faee4f69d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-19-Centos安装Mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-11-19-Centos安装Mysql.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-19-Centos系统设置.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-11-19-Centos系统设置.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-05-11-CDH大数据平台实战指南-1-大数据概述.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-1-概述.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-1-概述.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-2-快速入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-2-快速入门.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-3-SparkRDD编程指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-3-SparkRDD编程指南.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-05-24-Spark官方文档-4-SparkSQL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-22-CDH大数据平台实战指南-2-Cloudera介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-06-22-CDH大数据平台实战指南-2-Cloudera介绍.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722162629961.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722162753546.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722162831033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163000687.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163059115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163202432.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163412806.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163532178.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163714255.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163815334.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722164514762.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722164543878.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165552928.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165628738.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165632096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165720809.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190725154914262.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190725154936673.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190725155008548.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204530627.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204607118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204734242.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204813990.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204854724.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729205013541.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729210217865.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729215312854.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729215316573.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729215535095.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729220014936.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729220146445.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-Centos安装时间同步服务器.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,12 +53,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="255">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -75,6 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,7 +133,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,9 +171,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35550788" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36051503" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -217,11 +256,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-2-快速入门.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="465">
@@ -230,19 +264,24 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-1-概述.md">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="315">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-1-概述.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
             <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -289,8 +328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>

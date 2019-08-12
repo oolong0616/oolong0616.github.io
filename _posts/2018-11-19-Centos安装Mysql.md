@@ -7,10 +7,8 @@ author:     岑晨
 header-img: 
 catalog: true  
 tags:  
-    - Mysql     
+    - Mysql    
     - Centos     
-
-
 ---
 
 # Centos7 离线安装Mysql 5.6
