@@ -3,47 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="09e8dae9-a9ec-4ebe-a7ff-5c5faee4f69d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-19-Centos安装Mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-11-19-Centos安装Mysql.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-19-Centos系统设置.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-11-19-Centos系统设置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-11-CDH大数据平台实战指南-1-大数据概述.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-1-概述.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-1-概述.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-2-快速入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-2-快速入门.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-3-SparkRDD编程指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-05-22-Spark官方文档-3-SparkRDD编程指南.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-24-Spark官方文档-4-SparkSQL.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-22-CDH大数据平台实战指南-2-Cloudera介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-06-22-CDH大数据平台实战指南-2-Cloudera介绍.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722162629961.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722162753546.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722162831033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163000687.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163059115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163202432.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163412806.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163532178.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163714255.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722163815334.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722164514762.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722164543878.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165552928.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165628738.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165632096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190722165720809.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190725154914262.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190725154936673.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190725155008548.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204530627.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204607118.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204734242.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204813990.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729204854724.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729205013541.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729210217865.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729215312854.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729215316573.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729215535095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729220014936.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.assets/image-20190729220146445.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-CDH大数据平台实战指南-3-离线安装部署.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-06-25-Centos安装时间同步服务器.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,7 +85,7 @@
             <path>
               <item name="oolong0616.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="oolong0616.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
