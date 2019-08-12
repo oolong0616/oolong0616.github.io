@@ -7,8 +7,7 @@ author:     岑晨
 header-img: 
 catalog: true  
 tags:  
-    - spark     
-    - 笔记  
+    - spark  
 ---
 
 # 概述 
